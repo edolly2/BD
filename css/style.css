@@ -1,0 +1,438 @@
+/* RATIO 1.125 @ 16px */
+/* ======================= 
+======= VARIABLES ========
+========================*/
+/* --- COLORS--- */
+:root {
+  --primary-light-300: rgb(0, 173, 99);
+  --primary-dark-800: rgb(0, 66, 38);
+  --accent-light-200: rgb(220, 215, 118);
+  --accent-dark-800: rgb(87, 85, 46);
+  --accent-gray-500: rgb(102, 102, 102);
+}
+
+/* ===================== 
+======= GENERIC ========
+======================*/
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  max-width: 100%;
+  height: auto;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  font-size: 100%;
+  /* padding: 1.6rem; */
+  overflow-x: hidden;
+  line-height: 1.5;
+  font-family: "Open Sans", sans-serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ul,
+li {
+  padding: 0;
+  margin: 0;
+}
+
+/* ===================== 
+======= GLOBAL =========
+======================*/
+.btn {
+}
+
+.hidden {
+  display: none;
+}
+
+.active {
+}
+
+/* ======================== 
+======= TYPOGRAPHY ========
+=========================*/
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans&display=swap");
+
+h1 {
+  /* font-size: clamp(3.2432rem, 6.5vw, 6.576rem); */
+  font-size: clamp(3.2rem, 4vw, 4.2rem);
+}
+
+h2 {
+  /* font-size: clamp(2.5632rem, 5vw, 5.1952rem); */
+  font-size: clamp(2.4rem, 3vw, 3.2rem);
+}
+
+h3 {
+  /* font-size: clamp(2.0256rem, 4vw, 4.1056rem); */
+  font-size: clamp(1.8rem, 2.5vw, 2.2rem);
+}
+
+h4,
+h5,
+h6,
+p,
+label,
+textarea,
+button,
+a,
+input,
+li {
+  /* font-size: clamp(1.6rem, 2vw ,2rem); */
+  font-size: clamp(1.6rem, 2vw, 1.8rem);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  font-family: "Merriweather", serif;
+}
+
+/* ===================== 
+======= LAYOUT =========
+======================*/
+
+/* ===================== 
+======= HEADER =========
+======================*/
+.header {
+  display: flex;
+  padding: 1.6rem;
+  /* margin-bottom: 1.6rem; */
+  align-items: center;
+  justify-content: space-between;
+  /* position: relative; */
+  z-index: 2;
+  background-color: blue;
+}
+
+/* .hamburger-icon-cont {
+  position: relative;
+  z-index: 4;
+  
+} */
+
+.hamburger-icon-cont {
+  position: relative;
+  z-index: 4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 5rem;
+  height: 5rem;
+  cursor: pointer;
+  transition: all 700ms ease-out 100ms;
+}
+
+/* .hamburger-icon {
+  font-size: 4rem;
+  transition: all 700ms ease-out 100ms;
+} */
+.hamburger-icon {
+  width: 3rem;
+  height: 0.4rem;
+  background-color: black;
+  border-radius: 0.5rem;
+  transition: all 700ms ease-out 100ms;
+}
+
+.hamburger-icon::before,
+.hamburger-icon::after {
+  content: "";
+  position: absolute;
+  width: 3rem;
+  height: 0.4rem;
+  background-color: black;
+  border-radius: 0.5rem;
+  transition: all 700ms ease-out 100ms;
+}
+
+.hamburger-icon::before {
+  transform: translateY(-1rem);
+}
+
+.hamburger-icon::after {
+  transform: translateY(1rem);
+}
+
+/* HAMBURGER ANIMATION */
+.hamburger-icon-cont.open .hamburger-icon {
+  transform: translateX(-3rem);
+  background-color: transparent;
+}
+
+.hamburger-icon-cont.open .hamburger-icon::before {
+  transform: rotate(45deg) translate(2.1rem, -2.1rem);
+  background-color: #fff;
+}
+
+.hamburger-icon-cont.open .hamburger-icon::after {
+  transform: rotate(-45deg) translate(2.1rem, 2.1rem);
+  background-color: #fff;
+}
+
+.logo-cont {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 5.682rem;
+  height: auto;
+  position: relative;
+  z-index: 9999;
+}
+
+.logo-text {
+  font-family: "Merriweather", serif;
+  white-space: nowrap;
+  font-size: clamp(2.4rem, 3vw, 3.2rem);
+  margin-left: 0.4rem;
+  position: relative;
+  z-index: 4;
+  transition: all 700ms ease-out 100ms;
+  text-shadow: 2px 2px 2px white, -2px 2px 2px white, 2px -2px 2px white,
+    1px 2px 2px white, 2px 1px 2px white, -1px 2px 2px white, 2px -1px 2px white,
+    1px -2px 2px white, -2px 1px 2px white, -1px -2px 2px white,
+    -2px -1px 2px white, 1px 1px 2px white, -1px -1px 2px white,
+    -1px 1px 2px white, 1px -1px 2px white, 0px 2px 2px white, 2px 0px 2px white,
+    -2px 0px 2px white, 0px -2px 2px white, 0px 1px 2px white, 1px 0px 2px white,
+    0px -1px 2px white, -1px 0px 2px white, 0px 0px 2px white,
+    5px 5px 10px black;
+}
+
+.nav-cont {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  height: 50%;
+  width: 100%;
+  background-color: black;
+  /* transition-property: all;
+  transition-timing-function: ease-in-out;
+  transition-duration: 2s; */
+}
+
+nav {
+  width: 50%;
+  height: 100%;
+  background-color: black;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ======================== 
+======= NAVIGATION ========
+=========================*/
+
+/* ===================== 
+======= MAIN ===========
+======================*/
+
+/* ===================== 
+======= FOOTER =========
+======================*/
+
+/* ======================= 
+======= MEDIA Q'S ========
+========================*/
+/* @media screen and (min-width: 769px) {
+  h1 {
+      font-size: 5.682rem;
+  }
+  
+  h2 {
+      font-size: 4.797rem;
+  }
+  
+  h3 {
+      font-size: 4.264rem;
+  }
+  
+  h4 {
+      font-size: 3.598rem;
+  }
+  
+  h5 {
+      font-size: 3.198rem;
+  }
+
+  h6 {
+      font-size: 2.7rem;
+  }
+}  */
+
+/* @media screen and (min-width: 1025px) {
+  h1 {
+      font-size: 7.576rem;
+  }
+  
+  h2 {
+      font-size: 6.393rem;
+  }
+  
+  h3 {
+      font-size: 5.682rem;
+  }
+  
+  h4 {
+      font-size: 4.797rem;
+  }
+  
+  h5 {
+      font-size: 4.264rem;
+  }
+  
+  h6 {
+      font-size: 3.598rem;
+  }
+} */
+.white {
+  color: white;
+}
+
+.green-outline {
+  text-shadow: 2px 2px 2px rgb(0, 173, 99), -2px 2px 2px rgb(0, 173, 99), 2px -2px 2px rgb(0, 173, 99),
+  1px 2px 2px rgb(0, 173, 99), 2px 1px 2px rgb(0, 173, 99), -1px 2px 2px rgb(0, 173, 99), 2px -1px 2px rgb(0, 173, 99),
+  1px -2px 2px rgb(0, 173, 99), -2px 1px 2px rgb(0, 173, 99), -1px -2px 2px rgb(0, 173, 99),
+  -2px -1px 2px rgb(0, 173, 99), 1px 1px 2px rgb(0, 173, 99), -1px -1px 2px rgb(0, 173, 99),
+  -1px 1px 2px rgb(0, 173, 99), 1px -1px 2px rgb(0, 173, 99), 0px 2px 2px rgb(0, 173, 99), 2px 0px 2px rgb(0, 173, 99),
+  -2px 0px 2px rgb(0, 173, 99), 0px -2px 2px rgb(0, 173, 99), 0px 1px 2px rgb(0, 173, 99), 1px 0px 2px rgb(0, 173, 99),
+  0px -1px 2px rgb(0, 173, 99), -1px 0px 2px rgb(0, 173, 99), 0px 0px 2px rgb(0, 173, 99),
+  5px 5px 10px black;
+}
+
+.white-outline {
+  text-shadow: 2px 2px 2px white, -2px 2px 2px white, 2px -2px 2px white,
+    1px 2px 2px white, 2px 1px 2px white, -1px 2px 2px white, 2px -1px 2px white,
+    1px -2px 2px white, -2px 1px 2px white, -1px -2px 2px white,
+    -2px -1px 2px white, 1px 1px 2px white, -1px -1px 2px white,
+    -1px 1px 2px white, 1px -1px 2px white, 0px 2px 2px white, 2px 0px 2px white,
+    -2px 0px 2px white, 0px -2px 2px white, 0px 1px 2px white, 1px 0px 2px white,
+    0px -1px 2px white, -1px 0px 2px white, 0px 0px 2px white,
+    5px 5px 10px black;
+}
+
+#root {
+  /* position: relative; */
+}
+
+main {
+  text-align: center;
+  position: relative;
+  padding: 1.6rem;
+}
+
+.punchline-cont {
+  background-image: url("../assets/images/housefire.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 35vh;
+  max-height: 35vh;
+  position: relative;
+}
+
+.punchline-cont-overlay {
+  position: absolute;
+  /* z-index: 1; */
+  /* inset: 1.6rem; */
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  color: white;
+  padding: 0.9988rem;
+}
+
+.emergency-service-cont {
+  background-color: red;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.emergency-service-cont:hover {
+  background-color: white;
+}
+
+.emblem-cont {
+  display: flex;
+  width: 100%;
+}
+
+.emblem {
+  /* background-position: center; */
+  /* background-size: cover; */
+  min-width: 10%;
+  height: auto;
+  position: relative;
+}
+
+.emblem-overlay {
+  position: absolute;
+  inset: 0;
+  color: red;
+  width: 100%;
+  height: 100%;
+  font-size: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.services-cont {
+  background-color: red;
+  display: flex;
+  position: absolute;
+  bottom: 0.9988rem;
+  left: 0.9988rem;
+  right: 0.9988rem;
+  justify-content: space-evenly;
+  font-size: 2.883rem;
+  padding: 0.9988rem;
+}
+
+.social-cont {
+  font-size: 2.883rem;
+}
