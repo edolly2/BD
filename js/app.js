@@ -1,6 +1,6 @@
 const hamburgerIconBox = $('.hamburger-icon-cont');
 const hamburgerIcon = $('.hamburger-icon');
-const hamburgerMenu = $('.nav-cont');
+const hamburgerMenu = $('.mobile-nav-cont');
 let menuOpen = false;
 
 // HAMBURGER BUTTON
@@ -27,6 +27,12 @@ $(document).ready(() => {
     })
 })
 
+// TOOLTIPS
+var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+  return new bootstrap.Tooltip(tooltipTriggerEl)
+});
+
 
 // $(document).ready(() => {
 //     $(".emergency-service-cont").hover(() => {
@@ -36,3 +42,22 @@ $(document).ready(() => {
 //       })
 //     });
   
+$(document).ready(() => {
+    $('.nav-item').on('click', (event) => {
+        if ($(event.currentTarget).hasClass('home')) {
+            window.location.replace("/");
+        }
+        else if ($(event.currentTarget).hasClass('about')) {
+            window.location.replace("/about.html");
+        }
+        else if ($(event.currentTarget).hasClass('services')) {
+            window.location.replace("/services.html");
+        }
+        else if ($(event.currentTarget).hasClass('work')) {
+            window.location.replace("/work.html");
+        }
+        else if ($(event.currentTarget).hasClass('contact')) {
+            window.location.replace("/contact.html");
+        }
+    })
+});
