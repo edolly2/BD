@@ -9,17 +9,19 @@ $(document).ready(() => {
         if(!menuOpen) {
             $(hamburgerIconBox).addClass('open');
             $(hamburgerMenu).slideDown(600);
+            $(hamburgerIconBox).addClass('gray');
             // $(hamburgerIcon).css('background', 'white');
-            $('.logo-text').addClass('white');
-            $('.logo-text').addClass('green-outline');
+            // $('.logo-text').addClass('white');
+            // $('.logo-text').addClass('green-outline');
             menuOpen = true; 
         }
         else {
             $(hamburgerIconBox).removeClass('open');
             $(hamburgerMenu).slideUp(600);
+            $(hamburgerIconBox).removeClass('gray');
             // $(hamburgerIcon).css('background', 'black');
-            $('.logo-text').removeClass('white');
-            $('.logo-text').removeClass('green-outline');
+            // $('.logo-text').removeClass('white');
+            // $('.logo-text').removeClass('green-outline');
             menuOpen = false;
         }
     })
