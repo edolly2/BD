@@ -504,6 +504,7 @@ h6 {
   text-align: left;
   position: fixed;
   bottom: 0;
+  color: #fff;
 }
 
 .footer-content-cont {
@@ -548,6 +549,38 @@ h6 {
     5px 5px 10px black;
 }
 
+/* ============================ 
+======= SERVICES PAGE =========
+=============================*/
+.sp-main-title-cont {
+  margin: var(--margin-large) 0;
+}
+
+.sp-services-cont {
+
+}
+
+.sp-service {
+  background-color: red;
+  border-radius: 0.6rem;
+  padding: var(--padding-normal);
+  margin: var(--margin-normal) 0;
+}
+
+.sp-service-para{
+  background-color: #fff;
+  border-radius: 0.6rem;
+  padding: var(--padding-normal);
+  display: none;
+}
+
+.sp-service-title i {
+  margin-right: var(--margin-small);
+}
+
+.is-open {
+  /* display: block; */
+}
 /* ======================= 
 ======= MEDIA Q'S ========
 ========================*/
@@ -556,3 +589,13 @@ h6 {
     display: none;
   }
 } 
+
+
+.carousel-control-next-icon {
+  color: black;
+}
+
+.message-form {
+  background-color: green;
+  padding: var(--padding-large);
+}

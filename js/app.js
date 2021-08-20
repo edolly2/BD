@@ -61,3 +61,11 @@ $(document).ready(() => {
         }
     })
 });
+
+let isOpen = false;
+$(document).ready(() => {
+    $('.sp-service').on('click', function(event) {
+        $(this).children('div').toggle(700);
+        $(this).siblings().children('div').hide(700);
+    })
+});
