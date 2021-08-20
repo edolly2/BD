@@ -138,7 +138,7 @@ h6 {
   min-height: 100%;
   /* padding: var(--padding-small); */
   overflow-x: hidden;
-  position: relative;
+  /* position: relative; */
 }
 
 /* ===================== 
@@ -294,8 +294,8 @@ h6 {
   align-items: center;
   background-color: var(--accent-black-900);
   /* background-color: pink; */
-  /* border-bottom-left-radius: 0.6rem;
-  border-bottom-right-radius: 0.6rem; */
+  border-bottom-left-radius: 0.6rem;
+  border-bottom-right-radius: 0.6rem;
 }
 
 .nav-home {
