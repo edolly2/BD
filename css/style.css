@@ -141,8 +141,8 @@ h6 {
   /* padding: var(--padding-small); */
   overflow-x: hidden;
   /* position: relative; */
-  background-color: rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(10px); 
+  /* background-color: rgba(255, 255, 255, 0.2); */
+  backdrop-filter: blur(1px); 
 }
 
 /* ===================== 
@@ -419,6 +419,7 @@ h6 {
 
 .punchline-text-cont {
   text-align: center;
+  /* margin-top: 5rem; */
 }
 
 .punchline-text-cont h1 {
@@ -480,6 +481,7 @@ background: linear-gradient(90deg, rgba(230,217,97,1) 0%, rgba(206,186,73,1) 17%
   min-height: 6.8rem;
   border-radius: 0.6rem;
   box-shadow: 10px 10px 10px black;
+  margin-bottom: 5rem;
 }
 
 
@@ -663,7 +665,9 @@ background: linear-gradient(90deg, rgba(230,217,97,1) 0%, rgba(206,186,73,1) 17%
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: var(--margin-normal);
+  /* margin-bottom: var(--margin-normal); */
+  margin-bottom: 5rem;
+
   border-radius: 0.6rem;
   box-shadow: 10px 10px 10px black;
 }
@@ -683,6 +687,7 @@ background: linear-gradient(90deg, rgba(230,217,97,1) 0%, rgba(206,186,73,1) 17%
 
 .hero-h1 {
   text-align: center;
+  margin-top: var(--margin-normal);
   /* border-bottom: 2px solid black; */
   /* margin-bottom: var(--margin-normal); */
 }
@@ -697,7 +702,7 @@ hr {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: var(--margin-small);
+  margin-bottom: var(--margin-normal);
 }
 
 .hero-para i {
@@ -721,4 +726,9 @@ hr {
 
 .first-section {
   padding: var(--padding-normal);
+  background-color: var(--accent-gray-500);
+}
+
+.wrapper {
+  padding: var(--padding-normal)
 }
